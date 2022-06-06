@@ -11,3 +11,9 @@ git flow feature start feature_init_react_tailwind
 
 - https://rcherara.ca/how-to-install-git-flow/
 - https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+
+## create react app
+
+```shell
+npx create-react-app flashcard
+```
