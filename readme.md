@@ -17,3 +17,5 @@ git flow feature start feature_init_react_tailwind
 ```shell
 npx create-react-app flashcard
 ```
+## add tailwind css
+- https://tailwindcss.com/docs/guides/create-react-app
