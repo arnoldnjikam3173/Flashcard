@@ -1,9 +1,10 @@
 import React from 'react'
+import FlipCard from './FlipCard';
 
-const Flashcard = ({data}) => {
+const Flashcard = ({ data }) => {
   console.log(data);
-  const {country} = data;
-  console.log(country);
+  const { country,capital,flag } = data;
+ 
   return (
     <main className="min-h-screen bg-white font-sans text-gray-600 font-normal leading-normal flex flex-col justify-center items-center">
       <div className="flex flex-col  p-6">
@@ -11,9 +12,9 @@ const Flashcard = ({data}) => {
           <span className="text-2xl text-gray-800">Quest capital</span>
           <span className="text-xl text-gray-400">Question 1/4</span>
         </div>
-        <div className="px-4 md:px-16  py-24 md:py-40 border rounded-lg bg-white border-gray-300 text-4xl text-gray-800 font-semibold  cursor-pointer mb-10">
-          <p className="content-box-text  text-center">{country}</p>
-        </div>
+      
+        <FlipCard  flag={flag} frontData={country} backData={capital}/>
+      
         <div className="flex flex-col justify-center items-center md:flex-row md:justify-between">
           <div className="flex flex-row mb-6 md:mb-0">
             <button className="flex flex-col items-center justify-center text-gray-400 mr-16">
