@@ -1,16 +1,18 @@
 import React from 'react'
 import FlipCard from './FlipCard';
 
-const Flashcard = ({ data }) => {
-  console.log(data);
+
+const Flashcard = ({ data,handleClickNext,total,numCurrent }) => {
+
   const { country,capital,flag } = data;
+
  
   return (
     <main className="min-h-screen bg-white font-sans text-gray-600 font-normal leading-normal flex flex-col justify-center items-center">
-      <div className="flex flex-col  p-6">
+      <div className=" w-full max-w-2xl flex flex-col  p-6">
         <div className="max-w-screen-lg flex flex-col items-start mb-5">
           <span className="text-2xl text-gray-800">Quest capital</span>
-          <span className="text-xl text-gray-400">Question 1/4</span>
+          <span className="text-xl text-gray-400">Question {numCurrent}/{total}</span>
         </div>
       
         <FlipCard  flag={flag} frontData={country} backData={capital}/>
@@ -26,7 +28,7 @@ const Flashcard = ({ data }) => {
 
               <span className="text-lg" >Previous</span>
             </button>
-            <button className="flex flex-col items-center justify-center text-gray-800 ">
+            <button onClick={handleClickNext} className="flex flex-col items-center justify-center text-gray-800 ">
               <i className="mb-2 text-3xl">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
